@@ -93,7 +93,16 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self.navigationController pushViewController:[vcArr objectAtIndex:indexPath.row] animated:YES];
+    if (indexPath.row == 1) {
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[vcArr objectAtIndex:indexPath.row]];
+        [self.navigationController presentViewController:nav animated:YES completion:nil];
+        
+    }
+    else
+    {
+        [self.navigationController pushViewController:[vcArr objectAtIndex:indexPath.row] animated:YES];
+    }
+    
     
     
 }
