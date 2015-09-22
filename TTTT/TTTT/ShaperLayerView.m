@@ -64,7 +64,7 @@
     pathA.duration = 3;
     pathA.fromValue = [NSNumber numberWithFloat:0.0f];
     pathA.toValue = [NSNumber numberWithFloat:1.0f];
-    pathA.delegate = self;
+    //pathA.delegate = self;
     [frontSL addAnimation:pathA forKey:nil];
     
 }
@@ -74,17 +74,23 @@
     frontSL.strokeStart = [frontSL.presentationLayer strokeStart];
     frontSL.strokeEnd = [frontSL.presentationLayer strokeEnd];
     currentP = frontSL.strokeEnd;
-    [frontSL removeAllAnimations];
+    //[frontSL removeAllAnimations];
+    
+    CABasicAnimation *pathA = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    pathA.duration = 1;
+    pathA.fromValue = [NSNumber numberWithFloat:currentP];
+    pathA.toValue = [NSNumber numberWithFloat:0.0f];
+    pathA.delegate = self;
+    [frontSL addAnimation:pathA forKey:nil];
     
 }
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-    CABasicAnimation *pathA = [CABasicAnimation animationWithKeyPath:@"strokeHide"];
-    pathA.duration = 1;
-    pathA.fromValue = [NSNumber numberWithFloat:1.0f];
-    pathA.toValue = [NSNumber numberWithFloat:0.0f];
     
-    [frontSL addAnimation:pathA forKey:nil];}
+    frontSL.strokeEnd = 0.0f;
+    [frontSL removeAllAnimations];
+    
+}
 
 
 @end
