@@ -12,10 +12,10 @@
 
 #import <Masonry.h>
 
-#define SLIDER_W(vc)    (vc.view.frame.size.width/2+30)
-#define SLIDER_LEN(vc)    (vc.view.frame.size.width/2-30)
+#define SLIDER_W(vc)                (vc.view.frame.size.width/2+30)
+#define SLIDER_LEN(vc)              (vc.view.frame.size.width/2-30)
 
-
+#define SCROLL_PADDING(vc)          (VC_H(vc)*0.1)
 
 @interface SilderViewController ()
 
@@ -27,6 +27,7 @@
     UIView      *flowView;
     MASConstraint *flowC;
     UIEdgeInsets flowEI;
+    UIScrollView *_scrollView;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -70,6 +71,27 @@
         make.left.and.top.and.right.equalTo(flowView);
         make.height.equalTo(flowView.mas_height).multipliedBy(0.1);
     }];
+    
+    _scrollView =[UIScrollView new];
+    [_scrollView setBackgroundColor:[UIColor whiteColor]];
+    [flowView addSubview:_scrollView];
+    
+    UIView *contentView = [UIView new];
+    [contentView setBackgroundColor:[UIColor whiteColor]];
+    [_scrollView addSubview:contentView];
+    
+    [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(flowView).insets(UIEdgeInsetsMake(SCROLL_PADDING(self), 0, SCROLL_PADDING(self), 0));
+        make.width.equalTo(flowView.mas_width);
+        
+    }];
+    
+    [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(_scrollView);
+        make.height.equalTo(@1000);
+        
+    }];
+    
     
 }
 

@@ -9,6 +9,8 @@
 #import "FirstViewController.h"
 #import "SecondViewController.h"
 #import "SilderViewController.h"
+#import "ShapelayerViewController.h"
+#import "DrawLineViewController.h"
 
 #define VC_W(vc)        (vc.view.frame.size.width)
 #define VC_H(vc)        (vc.view.frame.size.height)
@@ -42,6 +44,8 @@
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:_tableView];
     [self addTableCellWithTitle:@"侧边栏" VC:[SilderViewController new]];
+    [self addTableCellWithTitle:@"Context画线" VC:[DrawLineViewController new]];
+    [self addTableCellWithTitle:@"ShapeLayer" VC:[ShapelayerViewController new]];
 }
 
 -(void)addTableCellWithTitle:(NSString *)title VC:(UIViewController *)vc

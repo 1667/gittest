@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94E50CA61BB12BA900BEF234 /* ShapelayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CA51BB12BA900BEF234 /* ShapelayerViewController.m */; settings = {ASSET_TAGS = (); }; };
+		94E50CA91BB12CF400BEF234 /* ShaperLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CA81BB12CF400BEF234 /* ShaperLayerView.m */; settings = {ASSET_TAGS = (); }; };
+		94E50CAC1BB13CEE00BEF234 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CAB1BB13CEE00BEF234 /* DrawLineView.m */; settings = {ASSET_TAGS = (); }; };
+		94E50CAF1BB1412E00BEF234 /* DrawLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CAE1BB1412E00BEF234 /* DrawLineViewController.m */; settings = {ASSET_TAGS = (); }; };
 		CBA354DD072907D67B9EC3F3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9873777E7B8D5495D46CBBAA /* libPods.a */; };
 		D8B1859A1B97411C002F3070 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B185991B97411C002F3070 /* main.m */; };
 		D8B1859D1B97411C002F3070 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B1859C1B97411C002F3070 /* AppDelegate.m */; };
@@ -35,6 +39,14 @@
 
 /* Begin PBXFileReference section */
 		58676D2D20C6FA70454C2B45 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		94E50CA41BB12BA900BEF234 /* ShapelayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapelayerViewController.h; sourceTree = "<group>"; };
+		94E50CA51BB12BA900BEF234 /* ShapelayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapelayerViewController.m; sourceTree = "<group>"; };
+		94E50CA71BB12CF400BEF234 /* ShaperLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaperLayerView.h; sourceTree = "<group>"; };
+		94E50CA81BB12CF400BEF234 /* ShaperLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShaperLayerView.m; sourceTree = "<group>"; };
+		94E50CAA1BB13CEE00BEF234 /* DrawLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLineView.h; sourceTree = "<group>"; };
+		94E50CAB1BB13CEE00BEF234 /* DrawLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLineView.m; sourceTree = "<group>"; };
+		94E50CAD1BB1412E00BEF234 /* DrawLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLineViewController.h; sourceTree = "<group>"; };
+		94E50CAE1BB1412E00BEF234 /* DrawLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLineViewController.m; sourceTree = "<group>"; };
 		9873777E7B8D5495D46CBBAA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA9027574EAC8C7DD74B8814 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D8B185941B97411C002F3070 /* TTTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +104,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		94E50CA31BB12B8E00BEF234 /* Shapelayer */ = {
+			isa = PBXGroup;
+			children = (
+				94E50CA41BB12BA900BEF234 /* ShapelayerViewController.h */,
+				94E50CA51BB12BA900BEF234 /* ShapelayerViewController.m */,
+				94E50CA71BB12CF400BEF234 /* ShaperLayerView.h */,
+				94E50CA81BB12CF400BEF234 /* ShaperLayerView.m */,
+				94E50CAA1BB13CEE00BEF234 /* DrawLineView.h */,
+				94E50CAB1BB13CEE00BEF234 /* DrawLineView.m */,
+				94E50CAD1BB1412E00BEF234 /* DrawLineViewController.h */,
+				94E50CAE1BB1412E00BEF234 /* DrawLineViewController.m */,
+			);
+			name = Shapelayer;
+			sourceTree = "<group>";
+		};
 		C32117E8F6709E516C141893 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +150,7 @@
 		D8B185961B97411C002F3070 /* TTTT */ = {
 			isa = PBXGroup;
 			children = (
+				94E50CA31BB12B8E00BEF234 /* Shapelayer */,
 				D8C71A651BAEF2C700C157F3 /* Utils */,
 				D8C71A611BAEDDE800C157F3 /* slider */,
 				D8B1859B1B97411C002F3070 /* AppDelegate.h */,
@@ -325,10 +353,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E50CA91BB12CF400BEF234 /* ShaperLayerView.m in Sources */,
 				D8C71A681BAEF2F500C157F3 /* Utils.m in Sources */,
 				D8B185C21B9743B9002F3070 /* SecondViewController.m in Sources */,
 				D8E728A51BA3BAAA0045A5E3 /* ScrollTitltView.m in Sources */,
 				D8B185A01B97411C002F3070 /* ViewController.m in Sources */,
+				94E50CA61BB12BA900BEF234 /* ShapelayerViewController.m in Sources */,
+				94E50CAC1BB13CEE00BEF234 /* DrawLineView.m in Sources */,
+				94E50CAF1BB1412E00BEF234 /* DrawLineViewController.m in Sources */,
 				D8B1859D1B97411C002F3070 /* AppDelegate.m in Sources */,
 				D8B1859A1B97411C002F3070 /* main.m in Sources */,
 				D8C71A641BAEDE0D00C157F3 /* sliderView.m in Sources */,

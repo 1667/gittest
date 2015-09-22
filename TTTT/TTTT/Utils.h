@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
 
+#import <Masonry.h>
 
 #define VC_W(vc)               (vc.view.frame.size.width)
 #define VC_H(vc)               (vc.view.frame.size.height)
