@@ -28,6 +28,7 @@
     MASConstraint *flowC;
     UIEdgeInsets flowEI;
     UIScrollView *_scrollView;
+    UIButton *btn;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -38,7 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     sView = [[sliderView alloc] initWithFrame:CGRectMake(0, 0, SLIDER_W(self), self.view.frame.size.height)];
     [self.view addSubview:sView];
@@ -77,22 +78,47 @@
     [flowView addSubview:_scrollView];
     
     UIView *contentView = [UIView new];
-    [contentView setBackgroundColor:[UIColor whiteColor]];
+    [contentView setBackgroundColor:[Utils randomColor]];
     [_scrollView addSubview:contentView];
     
     [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(flowView).insets(UIEdgeInsetsMake(SCROLL_PADDING(self), 0, SCROLL_PADDING(self), 0));
-        make.width.equalTo(flowView.mas_width);
+        make.width.equalTo(flowView.width);
         
+    }];
+    
+    btn = [UIButton new];
+    [btn setBackgroundColor:[Utils randomColor]];
+    [contentView addSubview:btn];
+    btn.tag = 1667;
+    [btn makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.top.and.left.and.right.equalTo(contentView);
+        make.height.equalTo(contentView.height).multipliedBy(0.1);
+    }];
+    
+    UIButton* btn2 = [UIButton new];
+    [btn2 setBackgroundColor:[Utils randomColor]];
+    [btn2 addTarget:self action:@selector(removeTopView) forControlEvents:UIControlEventTouchUpInside];
+    [contentView addSubview:btn2];
+    [btn2 makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(btn.bottom);
+        make.left.and.right.equalTo(contentView);
+        make.height.equalTo(btn);
     }];
     
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(_scrollView);
         make.height.equalTo(@1000);
-        
+        make.width.equalTo(_scrollView);
     }];
     
     
+}
+
+-(void)removeTopView
+{
+    [btn removeFromSuperview];
 }
 
 -(void)dismissself:(id)sender
