@@ -10,4 +10,13 @@
 
 @implementation Utils
 
++(UIColor *)randomColor
+{
+    CGFloat r = arc4random()%256 / 255.0f;
+    CGFloat g = arc4random()%256 / 255.0f;
+    CGFloat b = arc4random()%256 / 255.0f;
+    return [UIColor colorWithRed:r green:g blue:b alpha:1];
+    
+}
+
 @end

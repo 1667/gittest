@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9410D4A61BB2344F00F24A3B /* TestScrollHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9410D4A51BB2344F00F24A3B /* TestScrollHeaderViewController.m */; settings = {ASSET_TAGS = (); }; };
+		9410D4A91BB2346F00F24A3B /* ScrollHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9410D4A81BB2346F00F24A3B /* ScrollHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		9410D4AC1BB234D800F24A3B /* ShapelCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9410D4AB1BB234D800F24A3B /* ShapelCircleView.m */; settings = {ASSET_TAGS = (); }; };
 		94E50CA61BB12BA900BEF234 /* ShapelayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CA51BB12BA900BEF234 /* ShapelayerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		94E50CA91BB12CF400BEF234 /* ShaperLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CA81BB12CF400BEF234 /* ShaperLayerView.m */; settings = {ASSET_TAGS = (); }; };
 		94E50CAC1BB13CEE00BEF234 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CAB1BB13CEE00BEF234 /* DrawLineView.m */; settings = {ASSET_TAGS = (); }; };
@@ -39,6 +42,12 @@
 
 /* Begin PBXFileReference section */
 		58676D2D20C6FA70454C2B45 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9410D4A41BB2344F00F24A3B /* TestScrollHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestScrollHeaderViewController.h; sourceTree = "<group>"; };
+		9410D4A51BB2344F00F24A3B /* TestScrollHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestScrollHeaderViewController.m; sourceTree = "<group>"; };
+		9410D4A71BB2346F00F24A3B /* ScrollHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollHeaderView.h; sourceTree = "<group>"; };
+		9410D4A81BB2346F00F24A3B /* ScrollHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollHeaderView.m; sourceTree = "<group>"; };
+		9410D4AA1BB234D800F24A3B /* ShapelCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapelCircleView.h; sourceTree = "<group>"; };
+		9410D4AB1BB234D800F24A3B /* ShapelCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapelCircleView.m; sourceTree = "<group>"; };
 		94E50CA41BB12BA900BEF234 /* ShapelayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapelayerViewController.h; sourceTree = "<group>"; };
 		94E50CA51BB12BA900BEF234 /* ShapelayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapelayerViewController.m; sourceTree = "<group>"; };
 		94E50CA71BB12CF400BEF234 /* ShaperLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaperLayerView.h; sourceTree = "<group>"; };
@@ -104,6 +113,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9410D4A31BB2341900F24A3B /* ScrollHeader */ = {
+			isa = PBXGroup;
+			children = (
+				9410D4A41BB2344F00F24A3B /* TestScrollHeaderViewController.h */,
+				9410D4A51BB2344F00F24A3B /* TestScrollHeaderViewController.m */,
+				9410D4A71BB2346F00F24A3B /* ScrollHeaderView.h */,
+				9410D4A81BB2346F00F24A3B /* ScrollHeaderView.m */,
+				9410D4AA1BB234D800F24A3B /* ShapelCircleView.h */,
+				9410D4AB1BB234D800F24A3B /* ShapelCircleView.m */,
+			);
+			name = ScrollHeader;
+			sourceTree = "<group>";
+		};
 		94E50CA31BB12B8E00BEF234 /* Shapelayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +172,7 @@
 		D8B185961B97411C002F3070 /* TTTT */ = {
 			isa = PBXGroup;
 			children = (
+				9410D4A31BB2341900F24A3B /* ScrollHeader */,
 				94E50CA31BB12B8E00BEF234 /* Shapelayer */,
 				D8C71A651BAEF2C700C157F3 /* Utils */,
 				D8C71A611BAEDDE800C157F3 /* slider */,
@@ -360,7 +383,10 @@
 				D8B185A01B97411C002F3070 /* ViewController.m in Sources */,
 				94E50CA61BB12BA900BEF234 /* ShapelayerViewController.m in Sources */,
 				94E50CAC1BB13CEE00BEF234 /* DrawLineView.m in Sources */,
+				9410D4AC1BB234D800F24A3B /* ShapelCircleView.m in Sources */,
 				94E50CAF1BB1412E00BEF234 /* DrawLineViewController.m in Sources */,
+				9410D4A61BB2344F00F24A3B /* TestScrollHeaderViewController.m in Sources */,
+				9410D4A91BB2346F00F24A3B /* ScrollHeaderView.m in Sources */,
 				D8B1859D1B97411C002F3070 /* AppDelegate.m in Sources */,
 				D8B1859A1B97411C002F3070 /* main.m in Sources */,
 				D8C71A641BAEDE0D00C157F3 /* sliderView.m in Sources */,

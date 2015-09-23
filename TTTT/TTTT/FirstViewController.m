@@ -11,6 +11,7 @@
 #import "SilderViewController.h"
 #import "ShapelayerViewController.h"
 #import "DrawLineViewController.h"
+#import "TestScrollHeaderViewController.h"
 
 #define VC_W(vc)        (vc.view.frame.size.width)
 #define VC_H(vc)        (vc.view.frame.size.height)
@@ -46,6 +47,7 @@
     [self addTableCellWithTitle:@"侧边栏" VC:[SilderViewController new]];
     [self addTableCellWithTitle:@"Context画线" VC:[DrawLineViewController new]];
     [self addTableCellWithTitle:@"ShapeLayer" VC:[ShapelayerViewController new]];
+    [self addTableCellWithTitle:@"下拉刷新" VC:[TestScrollHeaderViewController new]];
 }
 
 -(void)addTableCellWithTitle:(NSString *)title VC:(UIViewController *)vc

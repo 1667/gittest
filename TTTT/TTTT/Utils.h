@@ -16,8 +16,13 @@
 #define VC_W(vc)               (vc.view.frame.size.width)
 #define VC_H(vc)               (vc.view.frame.size.height)
 
+#define STATUS_H                ([[UIApplication sharedApplication] statusBarFrame].size.height)
+#define NAV_H(vc)               (vc.navigationController.navigationBar.frame.size.height)
 
+#define NAV_STATUS_H(vc)        (NAV_H(vc)+STATUS_H)
 
 @interface Utils : NSObject
+
++(UIColor *)randomColor;
 
 @end
