@@ -47,9 +47,9 @@
         frontSL.path = circlePath.CGPath;
         frontSL.strokeColor = [UIColor blueColor].CGColor;
         frontSL.fillColor = [UIColor clearColor].CGColor;
-        frontSL.lineWidth = strokeWidth;
+        frontSL.lineWidth = CGRectGetMidX(self.bounds);
         frontSL.strokeStart = 0.0f;
-        frontSL.strokeEnd = 0.5f;
+        frontSL.strokeEnd = 0.0f;
         [self.layer addSublayer:frontSL];
         //self.layer.mask = backSL;//设置view 形状
         
@@ -64,26 +64,25 @@
     pathA.duration = 3;
     pathA.fromValue = [NSNumber numberWithFloat:0.0f];
     pathA.toValue = [NSNumber numberWithFloat:1.0f];
-    //pathA.delegate = self;
-    [frontSL addAnimation:pathA forKey:nil];
+    [frontSL addAnimation:pathA forKey:@"strokeEnd1"];
     
 }
 
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    frontSL.strokeStart = [frontSL.presentationLayer strokeStart];
-    frontSL.strokeEnd = [frontSL.presentationLayer strokeEnd];
-    currentP = frontSL.strokeEnd;
-    //[frontSL removeAllAnimations];
     
+    currentP = [frontSL.presentationLayer strokeEnd];
+    [frontSL removeAllAnimations];
+
     CABasicAnimation *pathA = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     pathA.duration = 1;
     pathA.fromValue = [NSNumber numberWithFloat:currentP];
     pathA.toValue = [NSNumber numberWithFloat:0.0f];
-    pathA.delegate = self;
-    [frontSL addAnimation:pathA forKey:nil];
+    [frontSL addAnimation:pathA forKey:@"strokeEnd2"];
+    
     
 }
+
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     

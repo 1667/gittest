@@ -10,6 +10,8 @@
 		9410D4A61BB2344F00F24A3B /* TestScrollHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9410D4A51BB2344F00F24A3B /* TestScrollHeaderViewController.m */; settings = {ASSET_TAGS = (); }; };
 		9410D4A91BB2346F00F24A3B /* ScrollHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9410D4A81BB2346F00F24A3B /* ScrollHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		9410D4AC1BB234D800F24A3B /* ShapelCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9410D4AB1BB234D800F24A3B /* ShapelCircleView.m */; settings = {ASSET_TAGS = (); }; };
+		9426AAD21BB38CEA005FB7CB /* popWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9426AAD11BB38CEA005FB7CB /* popWindow.m */; settings = {ASSET_TAGS = (); }; };
+		9426AAD51BB38DD0005FB7CB /* popWinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9426AAD41BB38DD0005FB7CB /* popWinViewController.m */; settings = {ASSET_TAGS = (); }; };
 		94E50CA61BB12BA900BEF234 /* ShapelayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CA51BB12BA900BEF234 /* ShapelayerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		94E50CA91BB12CF400BEF234 /* ShaperLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CA81BB12CF400BEF234 /* ShaperLayerView.m */; settings = {ASSET_TAGS = (); }; };
 		94E50CAC1BB13CEE00BEF234 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CAB1BB13CEE00BEF234 /* DrawLineView.m */; settings = {ASSET_TAGS = (); }; };
@@ -48,6 +50,10 @@
 		9410D4A81BB2346F00F24A3B /* ScrollHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollHeaderView.m; sourceTree = "<group>"; };
 		9410D4AA1BB234D800F24A3B /* ShapelCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapelCircleView.h; sourceTree = "<group>"; };
 		9410D4AB1BB234D800F24A3B /* ShapelCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapelCircleView.m; sourceTree = "<group>"; };
+		9426AAD01BB38CEA005FB7CB /* popWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popWindow.h; sourceTree = "<group>"; };
+		9426AAD11BB38CEA005FB7CB /* popWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popWindow.m; sourceTree = "<group>"; };
+		9426AAD31BB38DD0005FB7CB /* popWinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popWinViewController.h; sourceTree = "<group>"; };
+		9426AAD41BB38DD0005FB7CB /* popWinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popWinViewController.m; sourceTree = "<group>"; };
 		94E50CA41BB12BA900BEF234 /* ShapelayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapelayerViewController.h; sourceTree = "<group>"; };
 		94E50CA51BB12BA900BEF234 /* ShapelayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapelayerViewController.m; sourceTree = "<group>"; };
 		94E50CA71BB12CF400BEF234 /* ShaperLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaperLayerView.h; sourceTree = "<group>"; };
@@ -133,6 +139,17 @@
 			name = CollectionVIew;
 			sourceTree = "<group>";
 		};
+		9426AACF1BB38CA6005FB7CB /* PopWindow */ = {
+			isa = PBXGroup;
+			children = (
+				9426AAD01BB38CEA005FB7CB /* popWindow.h */,
+				9426AAD11BB38CEA005FB7CB /* popWindow.m */,
+				9426AAD31BB38DD0005FB7CB /* popWinViewController.h */,
+				9426AAD41BB38DD0005FB7CB /* popWinViewController.m */,
+			);
+			name = PopWindow;
+			sourceTree = "<group>";
+		};
 		94E50CA31BB12B8E00BEF234 /* Shapelayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +196,7 @@
 		D8B185961B97411C002F3070 /* TTTT */ = {
 			isa = PBXGroup;
 			children = (
+				9426AACF1BB38CA6005FB7CB /* PopWindow */,
 				9410D4AD1BB2511600F24A3B /* CollectionVIew */,
 				9410D4A31BB2341900F24A3B /* ScrollHeader */,
 				94E50CA31BB12B8E00BEF234 /* Shapelayer */,
@@ -384,8 +402,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9426AAD21BB38CEA005FB7CB /* popWindow.m in Sources */,
 				94E50CA91BB12CF400BEF234 /* ShaperLayerView.m in Sources */,
 				D8C71A681BAEF2F500C157F3 /* Utils.m in Sources */,
+				9426AAD51BB38DD0005FB7CB /* popWinViewController.m in Sources */,
 				D8B185C21B9743B9002F3070 /* SecondViewController.m in Sources */,
 				D8E728A51BA3BAAA0045A5E3 /* ScrollTitltView.m in Sources */,
 				D8B185A01B97411C002F3070 /* ViewController.m in Sources */,
@@ -529,6 +549,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TTTT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -543,6 +564,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TTTT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

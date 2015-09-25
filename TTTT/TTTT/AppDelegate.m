@@ -8,18 +8,24 @@
 
 #import "AppDelegate.h"
 #import "FirstViewController.h"
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+{
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //在这里添加要启动的viewcontrol 每个应用一般只有一个window类
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    [self.window setRootViewController:[[UINavigationController alloc] initWithRootViewController:[FirstViewController new]]];
+    _popWin = [[popWindow alloc] initWithFrame:CGRectMake(0, 100, 40, 40)];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    FirstViewController *fC = [FirstViewController new];
+    fC.popWin = _popWin;
+    [self.window setRootViewController:[[UINavigationController alloc] initWithRootViewController:fC]];
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

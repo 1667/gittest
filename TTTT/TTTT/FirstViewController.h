@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "popWindow.h"
 
 @interface FirstViewController : UIViewController
+
+@property (nonatomic,strong) popWindow      *popWin;
 
 @end
