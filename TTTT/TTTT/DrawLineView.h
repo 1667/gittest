@@ -10,4 +10,6 @@
 
 @interface DrawLineView : UIView
 
+-(void)setLineCorlor:(NSInteger)c;
+
 @end

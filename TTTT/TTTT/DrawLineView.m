@@ -80,4 +80,22 @@
     CGContextClearRect(context, [self bounds]);
 }
 
+-(void)setLineCorlor:(NSInteger)c
+{
+    
+    CGContextRef layerContext = CGLayerGetContext(layer);
+    if (c == 1) {
+        brushWidth = 10;
+    }
+    else
+    {
+        brushWidth = 5.0;
+    }
+    
+    CGContextSetLineWidth(layerContext, brushWidth);
+    CGContextSetLineCap(layerContext, kCGLineCapRound);
+    brushColor = c;
+    CGContextSetRGBStrokeColor(layerContext, brushColor, brushColor, brushColor, 1);
+}
+
 @end
