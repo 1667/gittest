@@ -21,6 +21,11 @@
 
 #define NAV_STATUS_H(vc)        (NAV_H(vc)+STATUS_H)
 
+#define IMAGE_CUP               @"tu8601_7.jpg"
+#define IMAGE_CAMREA               @"tu8601_5.jpg"
+#define IMAGE_ICE_CRE               @"tu8601_10.jpg"
+
+
 @interface Utils : NSObject
 
 +(UIColor *)randomColor;

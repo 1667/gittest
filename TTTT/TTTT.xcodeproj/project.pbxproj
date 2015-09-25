@@ -12,6 +12,13 @@
 		9410D4AC1BB234D800F24A3B /* ShapelCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9410D4AB1BB234D800F24A3B /* ShapelCircleView.m */; settings = {ASSET_TAGS = (); }; };
 		9426AAD21BB38CEA005FB7CB /* popWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9426AAD11BB38CEA005FB7CB /* popWindow.m */; settings = {ASSET_TAGS = (); }; };
 		9426AAD51BB38DD0005FB7CB /* popWinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9426AAD41BB38DD0005FB7CB /* popWinViewController.m */; settings = {ASSET_TAGS = (); }; };
+		94307D1A1BB52F0700561BB6 /* CoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94307D191BB52F0700561BB6 /* CoreAnimationViewController.m */; settings = {ASSET_TAGS = (); }; };
+		94307D1E1BB5315B00561BB6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94307D1D1BB5315B00561BB6 /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
+		94307D211BB531DD00561BB6 /* UIScrollView+WithTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 94307D201BB531DD00561BB6 /* UIScrollView+WithTouch.m */; settings = {ASSET_TAGS = (); }; };
+		94307D231BB53AAC00561BB6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94307D221BB53AAC00561BB6 /* QuartzCore.framework */; };
+		94307D2E1BB53F6900561BB6 /* tu8601_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94307D2B1BB53F6900561BB6 /* tu8601_5.jpg */; settings = {ASSET_TAGS = (); }; };
+		94307D2F1BB53F6900561BB6 /* tu8601_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94307D2C1BB53F6900561BB6 /* tu8601_7.jpg */; settings = {ASSET_TAGS = (); }; };
+		94307D301BB53F6900561BB6 /* tu8601_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94307D2D1BB53F6900561BB6 /* tu8601_10.jpg */; settings = {ASSET_TAGS = (); }; };
 		94E50CA61BB12BA900BEF234 /* ShapelayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CA51BB12BA900BEF234 /* ShapelayerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		94E50CA91BB12CF400BEF234 /* ShaperLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CA81BB12CF400BEF234 /* ShaperLayerView.m */; settings = {ASSET_TAGS = (); }; };
 		94E50CAC1BB13CEE00BEF234 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CAB1BB13CEE00BEF234 /* DrawLineView.m */; settings = {ASSET_TAGS = (); }; };
@@ -54,6 +61,16 @@
 		9426AAD11BB38CEA005FB7CB /* popWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popWindow.m; sourceTree = "<group>"; };
 		9426AAD31BB38DD0005FB7CB /* popWinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popWinViewController.h; sourceTree = "<group>"; };
 		9426AAD41BB38DD0005FB7CB /* popWinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popWinViewController.m; sourceTree = "<group>"; };
+		94307D181BB52F0700561BB6 /* CoreAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationViewController.h; sourceTree = "<group>"; };
+		94307D191BB52F0700561BB6 /* CoreAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationViewController.m; sourceTree = "<group>"; };
+		94307D1C1BB5315B00561BB6 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		94307D1D1BB5315B00561BB6 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		94307D1F1BB531DD00561BB6 /* UIScrollView+WithTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+WithTouch.h"; sourceTree = "<group>"; };
+		94307D201BB531DD00561BB6 /* UIScrollView+WithTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+WithTouch.m"; sourceTree = "<group>"; };
+		94307D221BB53AAC00561BB6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		94307D2B1BB53F6900561BB6 /* tu8601_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tu8601_5.jpg; path = Image/tu8601_5.jpg; sourceTree = "<group>"; };
+		94307D2C1BB53F6900561BB6 /* tu8601_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tu8601_7.jpg; path = Image/tu8601_7.jpg; sourceTree = "<group>"; };
+		94307D2D1BB53F6900561BB6 /* tu8601_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tu8601_10.jpg; path = Image/tu8601_10.jpg; sourceTree = "<group>"; };
 		94E50CA41BB12BA900BEF234 /* ShapelayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapelayerViewController.h; sourceTree = "<group>"; };
 		94E50CA51BB12BA900BEF234 /* ShapelayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapelayerViewController.m; sourceTree = "<group>"; };
 		94E50CA71BB12CF400BEF234 /* ShaperLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaperLayerView.h; sourceTree = "<group>"; };
@@ -96,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94307D231BB53AAC00561BB6 /* QuartzCore.framework in Frameworks */,
 				CBA354DD072907D67B9EC3F3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +168,36 @@
 			name = PopWindow;
 			sourceTree = "<group>";
 		};
+		94307D171BB52EE500561BB6 /* Core_Animation */ = {
+			isa = PBXGroup;
+			children = (
+				94307D181BB52F0700561BB6 /* CoreAnimationViewController.h */,
+				94307D191BB52F0700561BB6 /* CoreAnimationViewController.m */,
+			);
+			name = Core_Animation;
+			sourceTree = "<group>";
+		};
+		94307D1B1BB5314000561BB6 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				94307D1F1BB531DD00561BB6 /* UIScrollView+WithTouch.h */,
+				94307D201BB531DD00561BB6 /* UIScrollView+WithTouch.m */,
+				94307D1C1BB5315B00561BB6 /* BaseViewController.h */,
+				94307D1D1BB5315B00561BB6 /* BaseViewController.m */,
+			);
+			name = BaseView;
+			sourceTree = "<group>";
+		};
+		94307D241BB53EDB00561BB6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				94307D2B1BB53F6900561BB6 /* tu8601_5.jpg */,
+				94307D2C1BB53F6900561BB6 /* tu8601_7.jpg */,
+				94307D2D1BB53F6900561BB6 /* tu8601_10.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		94E50CA31BB12B8E00BEF234 /* Shapelayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +216,7 @@
 		C32117E8F6709E516C141893 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94307D221BB53AAC00561BB6 /* QuartzCore.framework */,
 				9873777E7B8D5495D46CBBAA /* libPods.a */,
 			);
 			name = Frameworks;
@@ -196,6 +245,9 @@
 		D8B185961B97411C002F3070 /* TTTT */ = {
 			isa = PBXGroup;
 			children = (
+				94307D241BB53EDB00561BB6 /* Images */,
+				94307D1B1BB5314000561BB6 /* BaseView */,
+				94307D171BB52EE500561BB6 /* Core_Animation */,
 				9426AACF1BB38CA6005FB7CB /* PopWindow */,
 				9410D4AD1BB2511600F24A3B /* CollectionVIew */,
 				9410D4A31BB2341900F24A3B /* ScrollHeader */,
@@ -351,7 +403,10 @@
 			files = (
 				D8B185A31B97411C002F3070 /* Main.storyboard in Resources */,
 				D8B185A81B97411C002F3070 /* LaunchScreen.xib in Resources */,
+				94307D301BB53F6900561BB6 /* tu8601_10.jpg in Resources */,
 				D8B185A51B97411C002F3070 /* Images.xcassets in Resources */,
+				94307D2E1BB53F6900561BB6 /* tu8601_5.jpg in Resources */,
+				94307D2F1BB53F6900561BB6 /* tu8601_7.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9426AAD21BB38CEA005FB7CB /* popWindow.m in Sources */,
+				94307D1E1BB5315B00561BB6 /* BaseViewController.m in Sources */,
 				94E50CA91BB12CF400BEF234 /* ShaperLayerView.m in Sources */,
 				D8C71A681BAEF2F500C157F3 /* Utils.m in Sources */,
 				9426AAD51BB38DD0005FB7CB /* popWinViewController.m in Sources */,
@@ -410,6 +466,7 @@
 				D8E728A51BA3BAAA0045A5E3 /* ScrollTitltView.m in Sources */,
 				D8B185A01B97411C002F3070 /* ViewController.m in Sources */,
 				94E50CA61BB12BA900BEF234 /* ShapelayerViewController.m in Sources */,
+				94307D211BB531DD00561BB6 /* UIScrollView+WithTouch.m in Sources */,
 				94E50CAC1BB13CEE00BEF234 /* DrawLineView.m in Sources */,
 				9410D4AC1BB234D800F24A3B /* ShapelCircleView.m in Sources */,
 				94E50CAF1BB1412E00BEF234 /* DrawLineViewController.m in Sources */,
@@ -417,6 +474,7 @@
 				9410D4A91BB2346F00F24A3B /* ScrollHeaderView.m in Sources */,
 				D8B1859D1B97411C002F3070 /* AppDelegate.m in Sources */,
 				D8B1859A1B97411C002F3070 /* main.m in Sources */,
+				94307D1A1BB52F0700561BB6 /* CoreAnimationViewController.m in Sources */,
 				D8C71A641BAEDE0D00C157F3 /* sliderView.m in Sources */,
 				D8B185BF1B974163002F3070 /* FirstViewController.m in Sources */,
 				D8C71A601BAEDD9F00C157F3 /* SilderViewController.m in Sources */,

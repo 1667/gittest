@@ -25,6 +25,7 @@
     dV = [[DrawLineView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:dV];
     
+    //[self.navigationController setNavigationBarHidden:YES animated:YES];
     current = 0;
     tmpButton = [UIButton new];
     tmpButton.layer.masksToBounds = YES;

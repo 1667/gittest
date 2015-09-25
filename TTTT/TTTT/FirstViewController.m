@@ -12,6 +12,7 @@
 #import "ShapelayerViewController.h"
 #import "DrawLineViewController.h"
 #import "TestScrollHeaderViewController.h"
+#import "CoreAnimationViewController.h"
 
 #define VC_W(vc)        (vc.view.frame.size.width)
 #define VC_H(vc)        (vc.view.frame.size.height)
@@ -31,6 +32,12 @@
     
 }
 //Viewcontrol有自己的生命周期，一般在这个函数里初始化界面就行了
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -48,6 +55,8 @@
     [self addTableCellWithTitle:@"Context画线" VC:[DrawLineViewController new]];
     [self addTableCellWithTitle:@"ShapeLayer" VC:[ShapelayerViewController new]];
     [self addTableCellWithTitle:@"下拉刷新" VC:[TestScrollHeaderViewController new]];
+    [self addTableCellWithTitle:@"动画" VC:[CoreAnimationViewController new]];
+    
 }
 
 -(void)addTableCellWithTitle:(NSString *)title VC:(UIViewController *)vc
@@ -100,7 +109,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    _popWin.hidden = !_popWin.hidden;
+    //_popWin.hidden = !_popWin.hidden;
     
     if (indexPath.row == 1) {
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[vcArr objectAtIndex:indexPath.row]];

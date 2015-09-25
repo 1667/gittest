@@ -32,11 +32,12 @@
         _titleBtnArray = [NSMutableArray new];
         _viewArray = vA;
         frameArray = [NSMutableArray new];
+        [self initView];
     }
     return self;
 }
 
--(void)layoutSubviews
+-(void)initView
 {
     btnW = self.frame.size.width/[_titleArray count];
     CGFloat x = 0;
@@ -76,7 +77,6 @@
         [_scrollView addSubview:v];
     };
     [_scrollView setContentSize:CGSizeMake(x, vH)];
-    
 }
 
 -(CGRect)valueToFrame:(NSValue *)value
