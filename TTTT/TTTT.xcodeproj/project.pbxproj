@@ -19,6 +19,10 @@
 		94307D2E1BB53F6900561BB6 /* tu8601_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94307D2B1BB53F6900561BB6 /* tu8601_5.jpg */; settings = {ASSET_TAGS = (); }; };
 		94307D2F1BB53F6900561BB6 /* tu8601_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94307D2C1BB53F6900561BB6 /* tu8601_7.jpg */; settings = {ASSET_TAGS = (); }; };
 		94307D301BB53F6900561BB6 /* tu8601_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94307D2D1BB53F6900561BB6 /* tu8601_10.jpg */; settings = {ASSET_TAGS = (); }; };
+		94CA63871BB8DF31000F3078 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 94CA63831BB8DF31000F3078 /* clock.png */; settings = {ASSET_TAGS = (); }; };
+		94CA63881BB8DF31000F3078 /* hour.png in Resources */ = {isa = PBXBuildFile; fileRef = 94CA63841BB8DF31000F3078 /* hour.png */; settings = {ASSET_TAGS = (); }; };
+		94CA63891BB8DF31000F3078 /* minute.png in Resources */ = {isa = PBXBuildFile; fileRef = 94CA63851BB8DF31000F3078 /* minute.png */; settings = {ASSET_TAGS = (); }; };
+		94CA638A1BB8DF31000F3078 /* secord.png in Resources */ = {isa = PBXBuildFile; fileRef = 94CA63861BB8DF31000F3078 /* secord.png */; settings = {ASSET_TAGS = (); }; };
 		94E50CA61BB12BA900BEF234 /* ShapelayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CA51BB12BA900BEF234 /* ShapelayerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		94E50CA91BB12CF400BEF234 /* ShaperLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CA81BB12CF400BEF234 /* ShaperLayerView.m */; settings = {ASSET_TAGS = (); }; };
 		94E50CAC1BB13CEE00BEF234 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E50CAB1BB13CEE00BEF234 /* DrawLineView.m */; settings = {ASSET_TAGS = (); }; };
@@ -71,6 +75,10 @@
 		94307D2B1BB53F6900561BB6 /* tu8601_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tu8601_5.jpg; path = Image/tu8601_5.jpg; sourceTree = "<group>"; };
 		94307D2C1BB53F6900561BB6 /* tu8601_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tu8601_7.jpg; path = Image/tu8601_7.jpg; sourceTree = "<group>"; };
 		94307D2D1BB53F6900561BB6 /* tu8601_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tu8601_10.jpg; path = Image/tu8601_10.jpg; sourceTree = "<group>"; };
+		94CA63831BB8DF31000F3078 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		94CA63841BB8DF31000F3078 /* hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hour.png; sourceTree = "<group>"; };
+		94CA63851BB8DF31000F3078 /* minute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minute.png; sourceTree = "<group>"; };
+		94CA63861BB8DF31000F3078 /* secord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secord.png; sourceTree = "<group>"; };
 		94E50CA41BB12BA900BEF234 /* ShapelayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapelayerViewController.h; sourceTree = "<group>"; };
 		94E50CA51BB12BA900BEF234 /* ShapelayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapelayerViewController.m; sourceTree = "<group>"; };
 		94E50CA71BB12CF400BEF234 /* ShaperLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaperLayerView.h; sourceTree = "<group>"; };
@@ -191,6 +199,10 @@
 		94307D241BB53EDB00561BB6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				94CA63831BB8DF31000F3078 /* clock.png */,
+				94CA63841BB8DF31000F3078 /* hour.png */,
+				94CA63851BB8DF31000F3078 /* minute.png */,
+				94CA63861BB8DF31000F3078 /* secord.png */,
 				94307D2B1BB53F6900561BB6 /* tu8601_5.jpg */,
 				94307D2C1BB53F6900561BB6 /* tu8601_7.jpg */,
 				94307D2D1BB53F6900561BB6 /* tu8601_10.jpg */,
@@ -402,11 +414,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8B185A31B97411C002F3070 /* Main.storyboard in Resources */,
+				94CA63881BB8DF31000F3078 /* hour.png in Resources */,
 				D8B185A81B97411C002F3070 /* LaunchScreen.xib in Resources */,
 				94307D301BB53F6900561BB6 /* tu8601_10.jpg in Resources */,
+				94CA63891BB8DF31000F3078 /* minute.png in Resources */,
 				D8B185A51B97411C002F3070 /* Images.xcassets in Resources */,
 				94307D2E1BB53F6900561BB6 /* tu8601_5.jpg in Resources */,
+				94CA63871BB8DF31000F3078 /* clock.png in Resources */,
 				94307D2F1BB53F6900561BB6 /* tu8601_7.jpg in Resources */,
+				94CA638A1BB8DF31000F3078 /* secord.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

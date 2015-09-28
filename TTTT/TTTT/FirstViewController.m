@@ -108,8 +108,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    //_popWin.hidden = !_popWin.hidden;
+
     
     if (indexPath.row == 1) {
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[vcArr objectAtIndex:indexPath.row]];

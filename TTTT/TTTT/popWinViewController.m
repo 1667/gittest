@@ -30,6 +30,7 @@
     [_tmpBtn setBackgroundColor:[Utils randomColor]];
     [self.view addSubview:_tmpBtn];
     [_tmpBtn addTarget:self action:@selector(refreshFrame:) forControlEvents:UIControlEventTouchUpInside];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     
 }
 

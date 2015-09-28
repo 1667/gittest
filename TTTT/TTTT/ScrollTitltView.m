@@ -23,7 +23,7 @@
     UIScrollView *_scrollView;
     
 }
--(instancetype)initWithFrame:(CGRect)frame titleText:(NSMutableArray *)titleArray viewArray:(NSMutableArray *)vA
+-(instancetype)initWithFrame:(CGRect)frame titleText:(NSArray *)titleArray viewArray:(NSMutableArray *)vA
 {
     self = [super  initWithFrame:frame];
     if (self) {

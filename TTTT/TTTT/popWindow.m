@@ -20,7 +20,7 @@
         pC.superWind = self;
         [self setRootViewController:[[UINavigationController alloc] initWithRootViewController:pC]];
         self.windowLevel = UIWindowLevelAlert;
-        self.hidden = YES;
+        self.hidden = NO;
         self.layer.masksToBounds = YES;
         self.layer.cornerRadius = 5.0;
         UIPanGestureRecognizer *panG = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panG:)];

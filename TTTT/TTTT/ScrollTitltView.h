@@ -11,9 +11,9 @@
 @interface ScrollTitltView : UIView
 
 
--(instancetype)initWithFrame:(CGRect)frame titleText:(NSMutableArray *)titleArray viewArray:(NSMutableArray *)vA;
+-(instancetype)initWithFrame:(CGRect)frame titleText:(NSArray *)titleArray viewArray:(NSMutableArray *)vA;
 
-@property (nonatomic,strong) NSMutableArray *titleArray;
+@property (nonatomic,strong) NSArray        *titleArray;
 @property (nonatomic,strong) NSMutableArray *titleBtnArray;
 @property (nonatomic,strong) NSMutableArray *viewArray;
 @property (nonatomic,strong) UIView         *flagView;

@@ -21,6 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     _popWin = [[popWindow alloc] initWithFrame:CGRectMake(0, 100, 40, 40)];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     FirstViewController *fC = [FirstViewController new];
     fC.popWin = _popWin;
