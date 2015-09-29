@@ -155,12 +155,12 @@
         make.height.equalTo(v1.width);
     }];
     
-    v1Sh = [CAShapeLayer layer];
-
+    v1Sh = [CAShapeLayer layer];//CAShapeLayer 主要需要处理的就是fillColor、path、和fillrule函数，主要是修改path的值来生成动画
     v1Sh.fillColor = [UIColor colorWithWhite:1 alpha:1].CGColor;
-    v1Sh.path = [self maskPathWithDiameter:80].CGPath;
+    v1Sh.path = [self maskPathWithDiameter:160].CGPath;
     v1Sh.fillRule = kCAFillRuleEvenOdd;
-    v1.layer.mask = v1Sh;
+    
+    v1.layer.mask = v1Sh;//mask 的图形只显示绘制出的路径，以外的界面用白背景填充
     //[v1.layer addSublayer:v1Sh];
     
     UIButton *makeBig = [UIButton new];
@@ -186,7 +186,7 @@
     return view;
 }
 
--(void)taped:(UITapGestureRecognizer *)taped
+-(void)taped:(UITapGestureRecognizer *)taped//可以用来实现不规则图形的点击事件是否响应
 {
     NSLog(@"touccccccccccc");
     
@@ -229,8 +229,8 @@
 
 -(void)moveMask
 {
-    NSInteger w = self.view.frame.size.width/2;
-    NSInteger h = self.view.frame.size.height/4;
+    NSInteger w = self.view.frame.size.width/2-80;
+    NSInteger h = self.view.frame.size.height/4-80;
     NSInteger randomx = arc4random()% w;
     NSInteger randomy = arc4random()% (h);
     
@@ -256,7 +256,6 @@
         [timeMove invalidate];
         [v1Sh removeAllAnimations];
         
-        CGPoint point = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/4);
         CABasicAnimation *pathA = [CABasicAnimation animationWithKeyPath:@"frame"];
         pathA.duration = 0.5;
         v1Sh.frame = CGRectMake(0, 0, 80, 80);

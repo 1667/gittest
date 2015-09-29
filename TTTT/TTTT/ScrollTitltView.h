@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define BTN_H       40
+
 @interface ScrollTitltView : UIView
 
 

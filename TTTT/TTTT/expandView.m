@@ -86,7 +86,7 @@
 
 -(UIBezierPath *)maskPathWithDiameter:(CGFloat)diameter
 {
-    UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, self.bounds.size.width-20, self.bounds.size.width-20)];
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, self.bounds.size.width-20, self.bounds.size.width-20)];//路径很重要和填充颜色
     [path moveToPoint:CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))];
     [path addArcWithCenter:CGPointMake(CGRectGetMidX(self.bounds)-10, CGRectGetMidY(self.bounds)/2+10) radius:diameter/2 startAngle:-M_PI/2 endAngle:M_PI *3.0/2.0 clockwise:YES];
     NSLog(@"%@  %@",[NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(self.bounds)-10, CGRectGetMidY(self.bounds)/2+10)],[NSValue valueWithCGPoint:self.center]);

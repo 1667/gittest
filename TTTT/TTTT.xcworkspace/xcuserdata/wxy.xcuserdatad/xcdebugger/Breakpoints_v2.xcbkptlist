@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TTTT/CoreAnimationViewController.m"
-            timestampString = "465190246.794993"
+            timestampString = "465212880.287555"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "-move:"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TTTT/CoreAnimationViewController.m"
-            timestampString = "465197474.080669"
+            timestampString = "465212880.287555"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "283"
-            endingLineNumber = "283"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
             landmarkName = "-maskPathWithDiameter:"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,12 +266,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TTTT/CoreAnimationViewController.m"
-            timestampString = "465190126.301761"
+            timestampString = "465212880.287555"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "239"
             endingLineNumber = "239"
             landmarkName = "-moveMask"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTTT/AlphaView.m"
+            timestampString = "465204899.833276"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "-BigAnt"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

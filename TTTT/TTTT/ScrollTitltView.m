@@ -8,6 +8,7 @@
 
 #import "ScrollTitltView.h"
 
+
 @interface ScrollTitltView() <UIScrollViewDelegate>
 
 @end
@@ -41,7 +42,7 @@
 {
     btnW = self.frame.size.width/[_titleArray count];
     CGFloat x = 0;
-    btnH = 40;
+    btnH = BTN_H;
     vH = self.frame.size.height-btnH;
     selfW = self.frame.size.width;
     _flagView = [[UIView alloc] initWithFrame:CGRectMake(10, btnH-2, btnW-20, 2)];

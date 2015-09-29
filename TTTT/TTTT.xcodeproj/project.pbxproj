@@ -20,6 +20,10 @@
 		94307D2F1BB53F6900561BB6 /* tu8601_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94307D2C1BB53F6900561BB6 /* tu8601_7.jpg */; settings = {ASSET_TAGS = (); }; };
 		94307D301BB53F6900561BB6 /* tu8601_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94307D2D1BB53F6900561BB6 /* tu8601_10.jpg */; settings = {ASSET_TAGS = (); }; };
 		9495F12F1BBA2240009AE62F /* expandView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9495F12E1BBA2240009AE62F /* expandView.m */; settings = {ASSET_TAGS = (); }; };
+		94AAAC411BBA5B6600629F72 /* CA2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AAAC401BBA5B6600629F72 /* CA2ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		94AAAC441BBA65DE00629F72 /* AlphaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AAAC431BBA65DE00629F72 /* AlphaView.m */; settings = {ASSET_TAGS = (); }; };
+		94AAAC471BBA78C900629F72 /* Test3DView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AAAC461BBA78C900629F72 /* Test3DView.m */; settings = {ASSET_TAGS = (); }; };
+		94AAAC4A1BBA8BAA00629F72 /* CuteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AAAC491BBA8BAA00629F72 /* CuteView.m */; settings = {ASSET_TAGS = (); }; };
 		94CA63871BB8DF31000F3078 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 94CA63831BB8DF31000F3078 /* clock.png */; settings = {ASSET_TAGS = (); }; };
 		94CA63881BB8DF31000F3078 /* hour.png in Resources */ = {isa = PBXBuildFile; fileRef = 94CA63841BB8DF31000F3078 /* hour.png */; settings = {ASSET_TAGS = (); }; };
 		94CA63891BB8DF31000F3078 /* minute.png in Resources */ = {isa = PBXBuildFile; fileRef = 94CA63851BB8DF31000F3078 /* minute.png */; settings = {ASSET_TAGS = (); }; };
@@ -78,6 +82,14 @@
 		94307D2D1BB53F6900561BB6 /* tu8601_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tu8601_10.jpg; path = Image/tu8601_10.jpg; sourceTree = "<group>"; };
 		9495F12D1BBA2240009AE62F /* expandView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expandView.h; sourceTree = "<group>"; };
 		9495F12E1BBA2240009AE62F /* expandView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expandView.m; sourceTree = "<group>"; };
+		94AAAC3F1BBA5B6600629F72 /* CA2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CA2ViewController.h; sourceTree = "<group>"; };
+		94AAAC401BBA5B6600629F72 /* CA2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CA2ViewController.m; sourceTree = "<group>"; };
+		94AAAC421BBA65DE00629F72 /* AlphaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphaView.h; sourceTree = "<group>"; };
+		94AAAC431BBA65DE00629F72 /* AlphaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphaView.m; sourceTree = "<group>"; };
+		94AAAC451BBA78C900629F72 /* Test3DView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test3DView.h; sourceTree = "<group>"; };
+		94AAAC461BBA78C900629F72 /* Test3DView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test3DView.m; sourceTree = "<group>"; };
+		94AAAC481BBA8BAA00629F72 /* CuteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CuteView.h; sourceTree = "<group>"; };
+		94AAAC491BBA8BAA00629F72 /* CuteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuteView.m; sourceTree = "<group>"; };
 		94CA63831BB8DF31000F3078 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
 		94CA63841BB8DF31000F3078 /* hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hour.png; sourceTree = "<group>"; };
 		94CA63851BB8DF31000F3078 /* minute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minute.png; sourceTree = "<group>"; };
@@ -186,6 +198,14 @@
 				94307D191BB52F0700561BB6 /* CoreAnimationViewController.m */,
 				9495F12D1BBA2240009AE62F /* expandView.h */,
 				9495F12E1BBA2240009AE62F /* expandView.m */,
+				94AAAC3F1BBA5B6600629F72 /* CA2ViewController.h */,
+				94AAAC401BBA5B6600629F72 /* CA2ViewController.m */,
+				94AAAC421BBA65DE00629F72 /* AlphaView.h */,
+				94AAAC431BBA65DE00629F72 /* AlphaView.m */,
+				94AAAC451BBA78C900629F72 /* Test3DView.h */,
+				94AAAC461BBA78C900629F72 /* Test3DView.m */,
+				94AAAC481BBA8BAA00629F72 /* CuteView.h */,
+				94AAAC491BBA8BAA00629F72 /* CuteView.m */,
 			);
 			name = Core_Animation;
 			sourceTree = "<group>";
@@ -478,12 +498,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94AAAC471BBA78C900629F72 /* Test3DView.m in Sources */,
 				9426AAD21BB38CEA005FB7CB /* popWindow.m in Sources */,
 				94307D1E1BB5315B00561BB6 /* BaseViewController.m in Sources */,
 				94E50CA91BB12CF400BEF234 /* ShaperLayerView.m in Sources */,
 				D8C71A681BAEF2F500C157F3 /* Utils.m in Sources */,
 				9495F12F1BBA2240009AE62F /* expandView.m in Sources */,
 				9426AAD51BB38DD0005FB7CB /* popWinViewController.m in Sources */,
+				94AAAC4A1BBA8BAA00629F72 /* CuteView.m in Sources */,
 				D8B185C21B9743B9002F3070 /* SecondViewController.m in Sources */,
 				D8E728A51BA3BAAA0045A5E3 /* ScrollTitltView.m in Sources */,
 				D8B185A01B97411C002F3070 /* ViewController.m in Sources */,
@@ -496,10 +518,12 @@
 				9410D4A91BB2346F00F24A3B /* ScrollHeaderView.m in Sources */,
 				D8B1859D1B97411C002F3070 /* AppDelegate.m in Sources */,
 				D8B1859A1B97411C002F3070 /* main.m in Sources */,
+				94AAAC411BBA5B6600629F72 /* CA2ViewController.m in Sources */,
 				94307D1A1BB52F0700561BB6 /* CoreAnimationViewController.m in Sources */,
 				D8C71A641BAEDE0D00C157F3 /* sliderView.m in Sources */,
 				D8B185BF1B974163002F3070 /* FirstViewController.m in Sources */,
 				D8C71A601BAEDD9F00C157F3 /* SilderViewController.m in Sources */,
+				94AAAC441BBA65DE00629F72 /* AlphaView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

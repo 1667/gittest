@@ -25,6 +25,8 @@
 #define IMAGE_CAMREA               @"tu8601_5.jpg"
 #define IMAGE_ICE_CRE               @"tu8601_10.jpg"
 
+#define RADIANS_TO_DEGREES(x) ((x)/M_PI*180.0)
+#define DEGREES_TO_RADIANS(x) ((x)/180.0*M_PI)
 
 @interface Utils : NSObject
 
