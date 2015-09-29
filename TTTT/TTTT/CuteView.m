@@ -9,7 +9,12 @@
 #import "CuteView.h"
 #import "Utils.h"
 
+#import <GLKit/GLKit.h>
+
 #define LBL_H       200
+
+#define LIGHT_DIRECTION 0, 1, -0.5
+#define AMBIENT_LIGHT 0.5
 
 @implementation CuteView
 {
@@ -71,8 +76,36 @@
     transform = CATransform3DRotate(transform, M_PI, 0, 1, 0);
     [self addFace:5 withTransform:transform];
     
+    UILabel *lbl = lableArray[3];
+    [collView bringSubviewToFront:lbl];
     
     
+}
+
+- (void)applyLightingToFace:(CALayer *)face
+{
+    //add lighting layer
+    CALayer *layer = [CALayer layer];
+    layer.frame = face.bounds;
+    [face addSublayer:layer];
+    //convert the face transform to matrix
+    //(GLKMatrix4 has the same structure as CATransform3D)
+    
+    CATransform3D transform = face.transform;
+    float a[16] = {(float)transform.m11,(float)transform.m12,(float)transform.m13,(float)transform.m14, (float)transform.m21,(float)transform.m22,(float)transform.m23,(float)transform.m24, (float)transform.m31,(float)transform.m32,(float)transform.m33,(float)transform.m34, (float)transform.m41,(float)transform.m42,(float)transform.m43,(float)transform.m44};
+    GLKMatrix4 matrix4 = GLKMatrix4MakeWithArray(a);
+    GLKMatrix3 matrix3 = GLKMatrix4GetMatrix3(matrix4);
+    //get face normal
+    GLKVector3 normal = GLKVector3Make(0, 0, 1);
+    normal = GLKMatrix3MultiplyVector3(matrix3, normal);
+    normal = GLKVector3Normalize(normal);
+    //get dot product with light direction
+    GLKVector3 light = GLKVector3Normalize(GLKVector3Make(LIGHT_DIRECTION));
+    float dotProduct = GLKVector3DotProduct(light, normal);
+    //set lighting layer opacity
+    CGFloat shadow = 1 + dotProduct - AMBIENT_LIGHT;
+    UIColor *color = [UIColor colorWithWhite:0 alpha:shadow];
+    layer.backgroundColor = color.CGColor;
 }
 
 -(void)addFace:(NSInteger)index withTransform:(CATransform3D)transForm
@@ -81,6 +114,11 @@
     [collView addSubview:lbl];
     lbl.center = CGPointMake(LBL_H/2, LBL_H/2);
     lbl.layer.transform = transForm;
+    if (index == 3) {
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        [lbl addGestureRecognizer:tap];
+    }
+    [self applyLightingToFace:lbl.layer];
 }
 
 -(UILabel *)createlableWithTag:(NSInteger)tag
@@ -96,6 +134,15 @@
     [ret setTextColor:[Utils randomColor]];
     
     return ret;
+}
+
+-(void)tap:(UITapGestureRecognizer *)tap
+{
+    CATransform3D per = CATransform3DIdentity;
+    per.m34 = -1.0/500.0;
+    per = CATransform3DRotate(per, -M_PI_4, 0, 1, 0);
+    per = CATransform3DRotate(per, -M_PI_4, 0, 0, 1);
+    collView.layer.sublayerTransform = per;
 }
 
 @end
