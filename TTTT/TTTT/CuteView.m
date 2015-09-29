@@ -40,7 +40,7 @@
     collView.center = CGPointMake(self.center.x, 260);
     collView.backgroundColor = [UIColor clearColor];
     [self addSubview:collView];
-    for (int i = 1; i <= 6; i++) {
+    for (int i = 0; i < 6; i++) {
         UILabel *lbl = [self createlableWithTag:i];
         [lableArray addObject:lbl];
     }
@@ -60,9 +60,7 @@
     transform = CATransform3DRotate(transform, M_PI_2, 0, 1, 0);
     [self addFace:1 withTransform:transform];
 
-    transform = CATransform3DMakeTranslation(0, -100, 0);
-    transform = CATransform3DRotate(transform, M_PI_2, 1, 0, 0);
-    [self addFace:2 withTransform:transform];
+    
     
     transform = CATransform3DMakeTranslation(0, 100, 0);
     transform = CATransform3DRotate(transform, -M_PI_2, 1, 0, 0);
@@ -75,6 +73,10 @@
     transform = CATransform3DMakeTranslation(0, 0, -100);
     transform = CATransform3DRotate(transform, M_PI, 0, 1, 0);
     [self addFace:5 withTransform:transform];
+    
+    transform = CATransform3DMakeTranslation(0, -100, 0);
+    transform = CATransform3DRotate(transform, M_PI_2, 1, 0, 0);
+    [self addFace:2 withTransform:transform];
     
     UILabel *lbl = lableArray[3];
     [collView bringSubviewToFront:lbl];
@@ -114,10 +116,7 @@
     [collView addSubview:lbl];
     lbl.center = CGPointMake(LBL_H/2, LBL_H/2);
     lbl.layer.transform = transForm;
-    if (index == 3) {
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-        [lbl addGestureRecognizer:tap];
-    }
+    
     [self applyLightingToFace:lbl.layer];
 }
 
@@ -132,6 +131,12 @@
     ret.frame = CGRectMake(0, 0, LBL_H, LBL_H);
     [ret setText:[NSString stringWithFormat:@"%ld",tag]];
     [ret setTextColor:[Utils randomColor]];
+    
+    if (tag == 3) {
+        [ret setUserInteractionEnabled:YES];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        [ret addGestureRecognizer:tap];
+    }
     
     return ret;
 }
