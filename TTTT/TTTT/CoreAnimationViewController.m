@@ -8,6 +8,7 @@
 
 #import "CoreAnimationViewController.h"
 #import "ScrollTitltView.h"
+#import "expandView.h"
 
 #define MASK_W          30
 
@@ -42,8 +43,9 @@
     colockView = [self createSecondView];
     [vA addObject:colockView];
     [vA addObject:[self createShaowView]];
+    [vA addObject:[[expandView alloc] initWithFrame:self.view.bounds]];
     
-    scrollTitle = [[ScrollTitltView alloc] initWithFrame:CGRectMake(0, NAV_STATUS_H(self), self.view.frame.size.width, self.view.frame.size.height-NAV_STATUS_H(self)) titleText:@[@"TTT1",@"TTT2",@"阴影"] viewArray:vA];
+    scrollTitle = [[ScrollTitltView alloc] initWithFrame:CGRectMake(0, NAV_STATUS_H(self), self.view.frame.size.width, self.view.frame.size.height-NAV_STATUS_H(self)) titleText:@[@"TTT1",@"TTT2",@"阴影",@"ExpandView"] viewArray:vA];
     [self.view addSubview:scrollTitle];
     
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick) userInfo:nil repeats:YES];
@@ -58,21 +60,21 @@
     UIView *view = [UIView new];
     view.backgroundColor = [Utils randomColor];
     
-    UIView *v1 = [UIView new];
-    v1.backgroundColor = [Utils randomColor];
+    UIView *v2 = [UIView new];
+    v2.backgroundColor = [Utils randomColor];
     UIImage *image = [UIImage imageNamed:IMAGE_CAMREA];
-    v1.layer.contents = (__bridge id)(image.CGImage);
+    v2.layer.contents = (__bridge id)(image.CGImage);
     //1
-    v1.layer.contentsGravity = kCAGravityResizeAspect;
+    v2.layer.contentsGravity = kCAGravityResizeAspect;
     //2
 //    v1.layer.contentsGravity = kCAGravityCenter;
 //    v1.layer.contentsScale = 3;
     
-    [view addSubview:v1];
-    [v1 makeConstraints:^(MASConstraintMaker *make) {
+    [view addSubview:v2];
+    [v2 makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(view.left).offset(10);
         make.right.equalTo(view.right).offset(-10);
-        make.height.equalTo(v1.width);
+        make.height.equalTo(v2.width);
         make.centerY.equalTo(view.centerY);
     }];
     
@@ -139,15 +141,12 @@
     v1 = [UIView new];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(taped:)];
     [v1 addGestureRecognizer:tap];
+    
     v1.backgroundColor = [Utils randomColor];
-    v1.layer.shadowOpacity = 0.5f;
-    v1.layer.shadowOffset = CGSizeMake(10, 10);
-    v1.layer.shadowRadius = 10;
+    //v1.layer.shadowOpacity = 0.5f;
+    //v1.layer.shadowOffset = CGSizeMake(10, 10);
+    //v1.layer.shadowRadius = 10;
     v1.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"tu8601_10.jpg"].CGImage);
-    v1Sh = [CAShapeLayer layer];
-    v1path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(MASK_W, MASK_W) radius:MASK_W startAngle:M_PI endAngle:-M_PI clockwise:NO];
-    v1Sh.path = v1path.CGPath;
-    v1.layer.mask = v1Sh;
     [view addSubview:v1];
     [v1 makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(view.left).offset(10);
@@ -155,6 +154,14 @@
         make.top.equalTo(view.top).offset(10);
         make.height.equalTo(v1.width);
     }];
+    
+    v1Sh = [CAShapeLayer layer];
+
+    v1Sh.fillColor = [UIColor colorWithWhite:1 alpha:1].CGColor;
+    v1Sh.path = [self maskPathWithDiameter:80].CGPath;
+    v1Sh.fillRule = kCAFillRuleEvenOdd;
+    v1.layer.mask = v1Sh;
+    //[v1.layer addSublayer:v1Sh];
     
     UIButton *makeBig = [UIButton new];
     [makeBig addTarget:self action:@selector(big:) forControlEvents:UIControlEventTouchUpInside];
@@ -222,9 +229,19 @@
 
 -(void)moveMask
 {
-    NSInteger w = self.view.frame.size.width-60;
+    NSInteger w = self.view.frame.size.width/2;
+    NSInteger h = self.view.frame.size.height/4;
     NSInteger randomx = arc4random()% w;
-    NSInteger randomy = arc4random()% w;
+    NSInteger randomy = arc4random()% (h);
+    
+    NSInteger bBack = arc4random()%2;
+    if (bBack == 1) {
+        randomx = -randomx;
+    }
+    bBack = arc4random() %2;
+    if (bBack == 1) {
+        randomy = -randomy;
+    }
     
     CABasicAnimation *pathA = [CABasicAnimation animationWithKeyPath:@"frame"];
     pathA.duration = 1;
@@ -239,31 +256,47 @@
         [timeMove invalidate];
         [v1Sh removeAllAnimations];
         
-        CGPoint point = v1.center;
+        CGPoint point = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/4);
         CABasicAnimation *pathA = [CABasicAnimation animationWithKeyPath:@"frame"];
-        pathA.duration = 1;
-        v1Sh.frame = CGRectMake(point.x, point.y, 80, 80);
+        pathA.duration = 0.5;
+        v1Sh.frame = CGRectMake(0, 0, 80, 80);
         pathA.delegate = self;
         [v1Sh addAnimation:pathA forKey:@"strokeEnd4"];
         
     }
     else
     {
+        [v1Sh removeAllAnimations];
+        
+        
         timeMove = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(moveMask) userInfo:nil repeats:YES];
         bMoveing = YES;
     }
     
 }
 
+- (UIBezierPath *)maskPathWithDiameter:(CGFloat)diameter  {
+    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/4) radius:diameter / 2 startAngle:-M_PI / 2 endAngle:M_PI*3.0/2.0 clockwise:YES];
+    
+    
+    NSLog(@"v1 frame %@ %@",[NSValue valueWithCGRect:v1.bounds],[NSValue valueWithCGPoint:v1.center]);
+    return path;
+}
+
+
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     if (flag) {
-        //v1Sh.path = v1path.CGPath;
-        UIBezierPath *toPath = [UIBezierPath bezierPathWithArcCenter:v1.center radius:v1.center.x startAngle:M_PI endAngle:-M_PI clockwise:NO];
-        CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
         
+        [v1Sh removeAllAnimations];
+    
+        v1Sh.fillRule = kCAFillRuleNonZero;
+        UIBezierPath *toPath = [self maskPathWithDiameter:v1.bounds.size.width*2];
+        CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
         pathAnimation.toValue = (id)toPath.CGPath;
         pathAnimation.duration = 1.0;
+        pathAnimation.removedOnCompletion = NO;//这两句的效果是让动画结束后不会回到原处，必须加
+        pathAnimation.fillMode = kCAFillModeForwards;//这两句的效果是让动画结束后不会回到原处，必须加
         [v1Sh addAnimation:pathAnimation forKey:@"cir"];
     }
 }
