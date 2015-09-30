@@ -13,6 +13,7 @@
 +(Class)layerClass//修改视图默认的layer
 {
     return [CATextLayer class];
+    
 }
 
 -(CATextLayer *)textLayer
