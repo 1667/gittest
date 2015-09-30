@@ -14,6 +14,8 @@
 #import "TestScrollHeaderViewController.h"
 #import "CoreAnimationViewController.h"
 #import "CA2ViewController.h"
+#import "CA3ViewController.h"
+#import <objc/runtime.h>
 
 #define VC_W(vc)        (vc.view.frame.size.width)
 #define VC_H(vc)        (vc.view.frame.size.height)
@@ -44,26 +46,30 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    arrData = [[NSMutableArray alloc] initWithObjects:@"来回滚动", nil];
-    vcArr = [[NSMutableArray alloc] initWithObjects:[SecondViewController new], nil];
+    arrData = [NSMutableArray new];
+    vcArr = [NSMutableArray new];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, VC_W(self), VC_H(self)) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:_tableView];
-    [self addTableCellWithTitle:@"侧边栏" VC:[SilderViewController new]];
-    [self addTableCellWithTitle:@"Context画线" VC:[DrawLineViewController new]];
-    [self addTableCellWithTitle:@"ShapeLayer" VC:[ShapelayerViewController new]];
-    [self addTableCellWithTitle:@"下拉刷新" VC:[TestScrollHeaderViewController new]];
-    [self addTableCellWithTitle:@"动画" VC:[CoreAnimationViewController new]];
-    [self addTableCellWithTitle:@"动画2" VC:[CA2ViewController new]];
+    
+    [self addTableCellWithTitle:@"来回滚动" VC:[SecondViewController class]];
+    [self addTableCellWithTitle:@"侧边栏" VC:[SilderViewController class]];
+    [self addTableCellWithTitle:@"Context画线" VC:[DrawLineViewController class]];
+    [self addTableCellWithTitle:@"ShapeLayer" VC:[ShapelayerViewController class]];
+    [self addTableCellWithTitle:@"下拉刷新" VC:[TestScrollHeaderViewController class]];
+    [self addTableCellWithTitle:@"动画" VC:[CoreAnimationViewController class]];
+    [self addTableCellWithTitle:@"动画2" VC:[CA2ViewController class]];
+    [self addTableCellWithTitle:@"动画3" VC:[CA3ViewController class]];
     
 }
 
--(void)addTableCellWithTitle:(NSString *)title VC:(UIViewController *)vc
+-(void)addTableCellWithTitle:(NSString *)title VC:(Class )vc
 {
     [arrData addObject:title];
+    //NSLog(@"%@",[NSString stringWithFormat:@"%s",class_getName([vc class])]);
     [vcArr addObject:vc];
 }
 
@@ -113,15 +119,33 @@
 
     
     if (indexPath.row == 1) {
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[vcArr objectAtIndex:indexPath.row]];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[vcArr objectAtIndex:indexPath.row] new]];
         [self.navigationController presentViewController:nav animated:YES completion:nil];
         
     }
     else
     {
-        [self.navigationController pushViewController:[vcArr objectAtIndex:indexPath.row] animated:YES];
+        [self.navigationController pushViewController:[[vcArr objectAtIndex:indexPath.row] new] animated:YES];
     }
     
+    
+    
+}
+
+-(UIViewController *)getVCFromClassName:(NSString *)str
+{
+    const char *className = [str cStringUsingEncoding:NSASCIIStringEncoding];
+    Class newClass = objc_getClass(className);
+    if (!newClass) {
+        
+        Class superClass = [NSObject class];
+        newClass = objc_allocateClassPair(superClass, className, 0);
+        objc_registerClassPair(newClass);
+        
+    }
+    id instance = [[newClass alloc] init];
+    
+    return instance;
     
     
 }

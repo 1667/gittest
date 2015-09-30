@@ -84,7 +84,7 @@
     
 }
 
-- (void)applyLightingToFace:(CALayer *)face
+- (void)applyLightingToFace:(CALayer *)face//添加阴影
 {
     //add lighting layer
     CALayer *layer = [CALayer layer];

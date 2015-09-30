@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 
@@ -15,6 +16,17 @@
 
 #define VC_W(vc)               (vc.view.frame.size.width)
 #define VC_H(vc)               (vc.view.frame.size.height)
+
+#define SCREEN_W               ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_H               ([UIScreen mainScreen].bounds.size.height)
+
+#define HALF_SCREEN_W             (SCREEN_W/2)
+#define HALF_SCREEN_H             (SCREEN_H/2)
+
+#define RANDOM_COLOR            [Utils randomColor]
+#define WHITE_COLOR             [UIColor whiteColor]
+#define CLEAR_COLOR             [UIColor clearColor]
+
 
 #define STATUS_H                ([[UIApplication sharedApplication] statusBarFrame].size.height)
 #define NAV_H(vc)               (vc.navigationController.navigationBar.frame.size.height)

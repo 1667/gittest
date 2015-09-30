@@ -103,7 +103,7 @@
 //    imageView.layer.transform = transForm;
     CATransform3D perspective = CATransform3DIdentity;
     perspective.m34 = DEFULT_M34;
-    self.layer.sublayerTransform = perspective; //拥有相当的消亡点，类似于中心点
+    self.layer.sublayerTransform = perspective; //拥有相当的消亡点，类似于中心点，设置父视图的这是属性，所有的子视图都会受影响
     
 }
 
