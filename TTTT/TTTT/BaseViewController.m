@@ -39,7 +39,7 @@
     _bEdit = NO;
     _bNeedRefresh = NO;
     [self initNoDataHolder];
-    
+    [self initView];
     
 }
 
@@ -64,6 +64,11 @@
     [noDataHolder setCenter:self.view.center];
     [noDataHolder setHidden:YES];
     [self.view addSubview:noDataHolder];
+    
+}
+
+-(void)initView
+{
     
 }
 
@@ -379,6 +384,16 @@
 -(void)deleteOldPicture:(long)index//删除网络图片
 {
     
+}
+
+//横屏设置
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

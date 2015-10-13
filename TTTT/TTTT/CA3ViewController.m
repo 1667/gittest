@@ -10,8 +10,9 @@
 #import "Utils.h"
 #import "ScrollTitltView.h"
 #import "MatchManView.h"
-#import "Test3DView.h"
-#import "CuteView.h"
+#import "TestTransform3DView.h"
+#import "CAGradientLayerView.h"
+#import "UIEmitterLayerView.h"
 
 @interface CA3ViewController ()
 
@@ -31,10 +32,11 @@
     NSMutableArray *vA = [NSMutableArray new];
     [vA addObject:[[MatchManView alloc] initWithFrame:CGRectMake(0, NAV_STATUS_H(self)+BTN_H, self.view.frame.size.width, self.view.frame.size.height-NAV_STATUS_H(self)-BTN_H)]];
     
-    [vA addObject:[[Test3DView alloc] initWithFrame:CGRectMake(0, NAV_STATUS_H(self)+BTN_H, self.view.frame.size.width, self.view.frame.size.height-NAV_STATUS_H(self)-BTN_H)]];
-    [vA addObject:[[CuteView alloc] initWithFrame:CGRectMake(0, NAV_STATUS_H(self)+BTN_H, self.view.frame.size.width, self.view.frame.size.height-NAV_STATUS_H(self)-BTN_H)]];
+    [vA addObject:[[TestTransform3DView alloc] initWithFrame:CGRectMake(0, NAV_STATUS_H(self)+BTN_H, self.view.frame.size.width, self.view.frame.size.height-NAV_STATUS_H(self)-BTN_H)]];
+    [vA addObject:[[CAGradientLayerView alloc] initWithFrame:CGRectMake(0, NAV_STATUS_H(self)+BTN_H, self.view.frame.size.width, self.view.frame.size.height-NAV_STATUS_H(self)-BTN_H)]];
+    [vA addObject:[[UIEmitterLayerView alloc] initWithFrame:CGRectMake(0, NAV_STATUS_H(self)+BTN_H, self.view.frame.size.width, self.view.frame.size.height-NAV_STATUS_H(self)-BTN_H)]];
     
-    scrollTitle = [[ScrollTitltView alloc] initWithFrame:CGRectMake(0, NAV_STATUS_H(self), self.view.frame.size.width, self.view.frame.size.height-NAV_STATUS_H(self)) titleText:@[@"alpha",@"3D",@"cube"] viewArray:vA];
+    scrollTitle = [[ScrollTitltView alloc] initWithFrame:CGRectMake(0, NAV_STATUS_H(self), self.view.frame.size.width, self.view.frame.size.height-NAV_STATUS_H(self)) titleText:@[@"alpha",@"3D",@"Gradient",@"Emitter"] viewArray:vA];
     [self.view addSubview:scrollTitle];
     
 }

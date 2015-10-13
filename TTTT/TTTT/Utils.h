@@ -13,6 +13,7 @@
 #define MAS_SHORTHAND_GLOBALS
 
 #import <Masonry.h>
+#import <MBProgressHUD.h>
 
 #define VC_W(vc)               (vc.view.frame.size.width)
 #define VC_H(vc)               (vc.view.frame.size.height)
@@ -40,8 +41,20 @@
 #define RADIANS_TO_DEGREES(x) ((x)/M_PI*180.0)
 #define DEGREES_TO_RADIANS(x) ((x)/180.0*M_PI)
 
+#define FILE_CACHE_DIC                          [NSHomeDirectory() stringByAppendingString:@"/Documents/Cache"]
+#define FILE_CACHE_PATH_DIC                     [NSHomeDirectory() stringByAppendingString:@"/Documents/Cache/"]
+#define FILE_FLAGES_URL(userid)                [FILE_CACHE_PATH_DIC stringByAppendingString:[NSString stringWithFormat:@"%@%@",userid,@"urlVedio"]]
+
 @interface Utils : NSObject
 
 +(UIColor *)randomColor;
++(UIImage *) createImageWithColor: (UIColor *) color;
++(MBProgressHUD *)createProHUDWithView:(UIView* )view Text:(NSString *)str;
++(BOOL)setLocalCache:(NSDictionary *)dic Flage:(NSString *)flage;
++(NSDictionary *)getLocalCache:(NSString *)flage;
++(BOOL)setLocalCacheWithObjct:(NSObject *)obj Flage:(NSString *)flage;
+
++(void)pauseLayer:(CALayer*)layer;
++(void)resumeLayer:(CALayer*)layer;
 
 @end

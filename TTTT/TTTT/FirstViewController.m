@@ -16,6 +16,13 @@
 #import "CA2ViewController.h"
 #import "CA3ViewController.h"
 #import <objc/runtime.h>
+#import "VideoSDKViewController.h"
+#import "MovieViewController.h"
+#import "CA4ViewController.h"
+#import "CA5ViewController.h"
+#import "ContectViewController.h"
+#import "BezierDLViewController.h"
+
 
 #define VC_W(vc)        (vc.view.frame.size.width)
 #define VC_H(vc)        (vc.view.frame.size.height)
@@ -63,6 +70,12 @@
     [self addTableCellWithTitle:@"动画" VC:[CoreAnimationViewController class]];
     [self addTableCellWithTitle:@"动画2" VC:[CA2ViewController class]];
     [self addTableCellWithTitle:@"动画3" VC:[CA3ViewController class]];
+    [self addTableCellWithTitle:@"百川SDK" VC:[VideoSDKViewController class]];
+    [self addTableCellWithTitle:@"视频播放" VC:[MovieViewController class]];
+    [self addTableCellWithTitle:@"动画4" VC:[CA4ViewController class]];
+    [self addTableCellWithTitle:@"动画5" VC:[CA5ViewController class]];
+    [self addTableCellWithTitle:@"联系人优化" VC:[ContectViewController class]];
+    [self addTableCellWithTitle:@"Bezier画线" VC:[BezierDLViewController class]];
     
 }
 

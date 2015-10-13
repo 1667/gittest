@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "FirstViewController.h"
 
+#import "Utils.h"
+#import <TAESDK/TaeSDK.h>
+
 @interface AppDelegate ()
 
 @end
@@ -27,6 +30,22 @@
     fC.popWin = _popWin;
     [self.window setRootViewController:[[UINavigationController alloc] initWithRootViewController:fC]];
     [self.window makeKeyAndVisible];
+    
+    [[TaeSDK sharedInstance] asyncInit:^{
+        
+    } failedCallback:^(NSError *error) {
+        NSLog(@"TaeSDK init failed!!!");
+    }];
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        if (![fileManager fileExistsAtPath:FILE_CACHE_DIC])
+        {
+            [fileManager createDirectoryAtPath:FILE_CACHE_PATH_DIC withIntermediateDirectories:YES attributes:nil error:nil];
+        }
+    });
     
     return YES;
 }
@@ -51,6 +70,16 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+//- (BOOL)shouldAutorotate
+//{
+//    return YES;
+//}
+
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    return UIInterfaceOrientationMaskAll;
 }
 
 @end

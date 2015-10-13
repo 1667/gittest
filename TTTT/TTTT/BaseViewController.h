@@ -51,4 +51,6 @@
 
 -(void)initNoDataHolderWithStr:(NSString *)str;
 
+-(void)initView;
+
 @end

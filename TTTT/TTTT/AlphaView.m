@@ -87,7 +87,7 @@
     transForm = CGAffineTransformRotate(transForm, M_PI_4);
     //transForm = CGAffineTransformTranslate(transForm, 200, 0);
     
-    imageView.layer.affineTransform = transForm;
+    imageView.layer.affineTransform = transForm;//layer 的affineTransform 和 view的transform一样 但是layer的transform是transform3D的类型
     
     start = YES;
     
